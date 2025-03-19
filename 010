@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+  int N;
+  long long p = 1;
+  cin >> N;
+  for(int i = N; i > 1; i--){
+    p *= i;
+  }
+  cout << p;
+}
