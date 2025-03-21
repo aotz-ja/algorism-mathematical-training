@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+/*練習*/
 int main(){
   int N;
   long long p = 1;
