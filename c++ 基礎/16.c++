@@ -8,7 +8,7 @@ int main(){
         cin >> data.at(i);
     }
     bool b = false;
-    for(int i = 0; i < 5; i++){
+    for(int i = 0; i < 4; i++){
         if(data.at(i) == data.at(i + 1)){
             b = true;
             break;
