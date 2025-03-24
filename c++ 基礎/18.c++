@@ -11,10 +11,8 @@ int main() {
     }
     vector<vector<char>> data(N, vector<char>(N));
     for(int i = 0; i < M; i++){
-        for(int j = 0; j < M; j++){
             data.at(A.at(i)-1).at(B.at(i)-1) = 'o';
             data.at(B.at(i)-1).at(A.at(i)-1) = 'x';
-        }
     }
     for(int i = 0; i < N; i++){
         for(int j = 0; j < N; j++){
