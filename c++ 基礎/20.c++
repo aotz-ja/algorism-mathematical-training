@@ -6,10 +6,14 @@ using namespace std;
 // x番の組織が親組織に提出する枚数を返す
 // childrenは組織の関係を表す2次元配列(参照渡し)
 int count_report_num(vector<vector<int>> &children, int x) {
-    if(x == 1){
+    if(children.at(x).size() == 0){
         return 1;
     }
-    return count_report_num(children,x - 1) + 1;
+    int sum = 0;
+    for(int c : children.at(x)){
+      sum += count_report_num(children,c);
+    }
+    return sum + 1;
   // (ここに追記して再帰関数を実装する)
 }
 
