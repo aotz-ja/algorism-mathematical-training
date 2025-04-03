@@ -15,5 +15,8 @@ int main(){
         cin >> a.at(i) >> b.at(i);
         pairs.at(i) = make_pair(a.at(i), b.at(i));
     }
-    
+    sort(pairs.begin(), pairs.end());
+    for(int i = 0; i < N; i++){
+    cout << pairs.at(i).first << " " << pairs.at(i).second << endl;
+    }
 }
