@@ -20,7 +20,8 @@
               "isDefault": true
             },
             "problemMatcher": ["$gcc"],
-            "detail": "コンパイル＆実行用タスク"
+            "detail": "コンパイル＆実行用タスク",
+            "dependsOn": ["run executable"]
         }
     ]
 }
