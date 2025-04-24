@@ -9,6 +9,6 @@
     "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.exe && ./$fileNameWithoutExt.exe",
     "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt.exe && ./$fileNameWithoutExt.exe"
     },
-    "code-runner.clearPreviousOutput": true
-
+    "code-runner.clearPreviousOutput": true,
+    "terminal.integrated.defaultEncoding": "shiftjis"
 }
