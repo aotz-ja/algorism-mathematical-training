@@ -6,8 +6,8 @@
     },
     "code-runner.runInTerminal": true,
     "code-runner.executorMap": {
-    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt.exe && ./$fileNameWithoutExt.exe",
-    "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt.exe && ./$fileNameWithoutExt.exe"
+    "cpp": "cd \"$dir\" && g++ \"$fileName\" -o \"$fileNameWithoutExt.exe\" && \"$dir\\$fileNameWithoutExt.exe\"",
+    "c": "cd \"$dir\" && gcc \"$fileName\" -o \"$fileNameWithoutExt.exe\" && \"$dir\\$fileNameWithoutExt.exe\""
     },
     "code-runner.clearPreviousOutput": true,
     "terminal.integrated.defaultEncoding": "shiftjis"
