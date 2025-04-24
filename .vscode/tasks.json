@@ -2,26 +2,21 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "build and run",
-            "type": "shell",
-            "command": "g++",
-            "args": [
-              "-std=c++17",
-              "-O2",
-              "-Wall",
-              "${file}",
-              "-o",
-              "${fileDirname}/${fileBasenameNoExtension}.exe"
-            ],
-            "group": {
-              "kind": "build",
-              "isDefault": true
-            },
-            "problemMatcher": ["$gcc"],
-            "detail": "コンパイル＆実行用タスク",
-            "dependsOn": ["run executable"]
-        }
-    ]
+  "tasks": [
+    {
+      "label": "build and run",
+      "type": "shell",
+      "command": "cmd",
+      "args": [
+        "/c",
+        "g++ -std=c++17 -O2 -Wall \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && \"${fileDirname}\\${fileBasenameNoExtension}.exe\""
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"],
+      "detail": "コンパイルしてから実行"
+    }
+  ]
 }
