@@ -6,22 +6,23 @@
 #include <vector>
 using namespace std;
 
-vector<int> input(int &n)
+int sum(vector<int> scores)
 {
-    vector<int> vec;
+    int sum = 0;
+    int l = scores.size();
+    for(int i = 0; i < l; i++){
+        sum += scores.at(i);
+    }
+    return sum;
+}
+
+vector<int> input(int n)
+{
+    vector<int> vec(n);
     for(int i = 0; i < n; i++){
         cin >> vec.at(i);
     }
     return vec;
-}
-
-int sum(vector<int> scores)
-{
-    int sum = 0;
-    for(int i = 0; i < scores.size(); i++){
-        sum += scores.at(i);
-    }
-    return sum;
 }
 
 void output(int sum_a, int sum_b, int sum_c)
