@@ -2,7 +2,9 @@
     "files.associations": {
         "ostream": "cpp",
         "iostream": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "algorithm": "cpp",
+        "xutility": "cpp"
     },
     "code-runner.runInTerminal": true,
     "code-runner.executorMap": {
