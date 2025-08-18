@@ -1,0 +1,42 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+
+int main(){
+	int i, j;
+	bool b = true;
+    vector<vector<int>> data(3, vector<int>(3));
+    vector<int> A(3), B(3);
+    for(i = 0; i < 3; i++){
+        for(j = 0; j < 3; j++){
+            cin >> data.at(i).at(j);
+        }
+    }
+    for(i = 0; i < data.at(0).at(0); i++){
+        A.at(0) = i;
+        for(j = 0; j < 3; j++){
+            B.at(j) = data.at(0).at(j) - i;
+        }
+    }
+	A.at(1) = data.at(1).at(0) - B.at(0);
+	A.at(2) = data.at(2).at(0) - B.at(0);
+	for(i = 1; i < 3; i++){
+		if(b == false){
+			break;
+		}
+		for(j = 1; j < 3; j++){
+			if(A.at(i) + B.at(j) != data.at(i).at(j)){
+				b = false;
+				break;
+			}
+		}
+	}
+    if(b == true){
+        cout << "Yes" << endl;
+	}
+    else{
+        cout << "No" << endl;
+		}
+	}
