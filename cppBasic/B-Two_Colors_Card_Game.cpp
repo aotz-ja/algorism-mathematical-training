@@ -9,42 +9,40 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <string>
 using namespace std;
 
 int main(){
-    int n, m, max;
+    int n, m;
     cin >> n;
-    vector<string> blue(n);
+    vector<int> points(n);//候補になる点数のメモ
+    vector<string> blue(n);//青に書く文字列一覧
     for (int i = 0; i < n; i++){
         cin >> blue.at(i);
     }
     sort(blue.begin(),blue.end());
 
     cin >> m;
-    vector<string> red(m);
+    vector<string> red(m);//赤に書く文字列一覧
     for (int i = 0; i < m; i++){
         cin >> red.at(i);
     }
     sort(red.begin(),red.end());
-
-    for(int i=0; i<n; i++){
-        if(blue.at(i) == blue.at(i+1)){
-            continue;
-        }
-        else if(i==n-1){
-            break;
-        }
-        else{
+    int maximum = 0;
+    for(int i = 0; i<n; i++){
+        int plus = 0;
         string s = blue.at(i);
-        int plus=0;
-        for(int j=i; j<n; j++){
-            if(blue.at(j)==s){
+        for(int j=0; j<n; j++){
+            if(s == blue.at(j)){
                 plus++;
             }
-            else{
-                break;
+        }
+        for(int k=0; k<m; k++){
+            if(s==red.at(k)){
+                plus--;
             }
         }
-        }
+        maximum=max(plus,maximum);
     }
+    cout << maximum << endl;
 }
