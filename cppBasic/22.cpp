@@ -8,15 +8,13 @@ using namespace std;
 
 int main(){
     int N;
-    vector<pair<int, int>> pairs(N);
     cin >> N;
-    vector<int> a(N), b(N);
+    vector<pair<int, int>> pairs(N);
     for(int i = 0; i < N; i++){
-        cin >> a.at(i) >> b.at(i);
-        pairs.at(i) = make_pair(a.at(i), b.at(i));
+        cin >> pairs.at(i).second >> pairs.at(i).first;
     }
     sort(pairs.begin(), pairs.end());
     for(int i = 0; i < N; i++){
-    cout << pairs.at(i).first << " " << pairs.at(i).second << endl;
+        cout << pairs.at(i).second << " " << pairs.at(i).first << endl;
     }
 }
