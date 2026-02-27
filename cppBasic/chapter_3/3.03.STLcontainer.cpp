@@ -1,3 +1,5 @@
+//写像の表現、map, erase, count, auto など
+
 #include <iostream>
 #include <map>
 #include <queue>
@@ -5,7 +7,7 @@
 using namespace std;
 
 int main(){
-    //写像を定義
+    //写像を定義, map
     map<string, int> score;
     score["Alice"] = 100;
     score["Dave"] = 95;
