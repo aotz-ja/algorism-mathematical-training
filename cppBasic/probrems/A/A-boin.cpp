@@ -1,3 +1,5 @@
+//文字が母音かどうかのチェック
+
 #include <iostream>
 #include <string>
 using namespace std;

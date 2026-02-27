@@ -1,3 +1,5 @@
+//５個の数列を読み込んで、連続して同じ数字が出てきているかどうかを調べる
+
 #include <iostream>
 #include <vector>
 using namespace std;

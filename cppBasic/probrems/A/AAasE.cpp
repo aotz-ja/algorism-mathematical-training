@@ -1,3 +1,5 @@
+//数字の和、差
+
 #include <iostream>
 #include <string>
 using namespace std;

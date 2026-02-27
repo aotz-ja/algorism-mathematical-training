@@ -1,7 +1,9 @@
+//N 個ずつの数列の組 A, P に対して, A(i) + P(j) = S になるような組 (i,j) が何通りあるか 
+
 #include <iostream>
 #include <vector>
 using namespace std;
-//N 個ずつの数列の組 A, P に対して, A(i) + P(j) = S になるような組 (i,j) が何通りあるか 
+
 int main(){
     int N, S, cnt;
     cin >> N >> S;

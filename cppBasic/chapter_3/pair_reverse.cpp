@@ -1,3 +1,5 @@
+// pair, reverse, sort の使い方を勉強
+
 #include <iostream>
 #include <algorithm>
 #include <utility>

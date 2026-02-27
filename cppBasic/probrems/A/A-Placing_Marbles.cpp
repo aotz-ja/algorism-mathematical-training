@@ -4,13 +4,12 @@
 求めてください。*/
 
 #include <iostream>
-#include <cmath>
 #include <string>
 using namespace std;
 #define N 3
 
 int main(){
-    string s;
+    string s;  //連続で０か１を入れるため string で十分
     int cnt=0;
     cin >> s;
     for(int i=0; i<N; i++){
